@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SetTerminalStyle' target in the 'SetTerminalStyle' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
