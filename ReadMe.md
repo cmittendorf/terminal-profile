@@ -3,6 +3,8 @@ Introduction
 
 A command line tool that changes the style of your current tab in Terminal.app on Mac OS X. This tools is largely inspired by an AppleScript? from the Omni Group. That script was broken when Snow Leopard came out, however there is now an updated for the script available from the Omni Group. Too bad that I found the update after I had written this helper. Though it was a nice learning example for using the ScriptingBridge Framework.
 
+![SetTerminalStyle ScreenShot](TerminalScreenShot.png "Terminal.app running SetTerminalStyle")
+
 See the following blog post for further information on the original AppleScript:
 
 http://blog.omnigroup.com/2007/11/03/terminal-scripting-in-105/
