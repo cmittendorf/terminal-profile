@@ -22,10 +22,16 @@ int main (int argc, char **argv)
     
     int ch;
     NSString *currentStyle = nil;
+
+    if (argc == 1) {
+        printUsage();
+        [pool drain];
+        return 0;
+    }
     
     TerminalColorSwitcher *tcs = [[TerminalColorSwitcher alloc] init];
     
-    while ( (ch = getopt(argc, argv, "s:t:lch")) != -1 )
+    while ( (ch = getopt(argc, argv, ":s:t:lch")) != -1 )
     {
         switch (ch)
         {
@@ -48,8 +54,6 @@ int main (int argc, char **argv)
                     }
                 }
                 break;
-            case '?':
-            case 'h':
             default:
                 printUsage();
                 [pool drain];
