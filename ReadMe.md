@@ -50,6 +50,11 @@ if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
         /usr/bin/sudo "$@"
         SetTerminalStyle -s "${STYLE}" 
     }
+    function man {
+        STYLE=$(SetTerminalStyle -c -s man -t "$1")
+        /usr/bin/man "$@"
+        SetTerminalStyle -s "${STYLE}" 
+    }
 fi
 ```
 
