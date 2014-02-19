@@ -12,9 +12,9 @@
 
 void printUsage()
 {
-    printf("usage: SetTerminalStyle -s <profile> [-t <title>] [-c]\n");
-    printf("       SetTerminalStyle -l\n");
-    printf("       SetTerminalStyle -c\n");
+    printf("usage: terminal-profile -s <profile> [-t <title>] [-c]\n");
+    printf("       terminal-profile -l\n");
+    printf("       terminal-profile -c\n");
 }
 
 int main (int argc, char **argv)

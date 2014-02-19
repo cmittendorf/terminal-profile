@@ -1,23 +1,23 @@
 require "formula"
 
-class TerminalStyle < Formula
-  homepage "https://github.com/cmittendorf/SetTerminalStyle"
-  url "https://github.com/cmittendorf/SetTerminalStyle/archive/1.0.0.zip"
-  sha1 "b63f30221534f347fad2f5da15f1a645de86bed6"
+class TerminalProfile < Formula
+  homepage "https://github.com/cmittendorf/terminal-profile"
+  url "https://github.com/cmittendorf/terminal-profile/archive/1.0.0.zip"
+  sha1 "892ea4e6383bc21f5a2defb18738b80dcd489e15"
 
-  head "https://github.com/cmittendorf/SetTerminalStyle", :branch => "master"
+  head "https://github.com/cmittendorf/terminal-profile", :branch => "master"
 
   depends_on :macos => :mountain_lion
   depends_on :xcode
 
   def install
     # Remove unrecognized options if warned by configure
-    system 'xcodebuild', "-project", "SetTerminalStyle.xcodeproj",
-                         "-target", "SetTerminalStyle",
+    system 'xcodebuild', "-project", "TerminalProfile.xcodeproj",
+                         "-target", "terminal-profile",
                          "SYMROOT=build", "DSTROOT=#{buildpath}",
                          "-verbose", "install"
-    man1.install "SetTerminalStyle.1" => "terminal-profile.1"
-    bin.install "usr/local/bin/SetTerminalStyle" => "terminal-profile"
+    man1.install "terminal-profile.1"
+    bin.install "usr/local/bin/terminal-profile" => "terminal-profile"
   end
 
   test do
