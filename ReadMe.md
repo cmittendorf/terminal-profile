@@ -58,6 +58,7 @@ Build Instructions
 
 Simply check out the subversion project and call make in the directory. You may install the tool using make install or simply do a cp to your preferred location.
 
-For using another applications scripting definition we have to convert its sdef file to a header file that will contain all necessary information about the applications scripting features. For the conversion we need two command line tools: sdef and sdp. The required script is added as "Run Script" build step in Xcodes definition of target build phases.
+For using another applications scripting definition we have to convert its sdef file to a header file that will contain all necessary information about the applications scripting features. For the conversion we need two command line tools: sdef and sdp. The necessary script is added as a "Run Script" build step in Xcodes definition of target build phases.
 
-    sdef /Applications/Utilities/Terminal.app | /usr/bin/sdp -fh -o . --basename "Terminal" --bundleid "com.apple.Terminal"
+    sdef /Applications/Utilities/Terminal.app | \
+    /usr/bin/sdp -fh -o . --basename "Terminal" --bundleid "com.apple.Terminal"
