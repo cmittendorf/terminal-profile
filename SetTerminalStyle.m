@@ -12,7 +12,7 @@
 
 void printUsage()
 {
-    printf("usage: SetTerminalStyle -s <style> [-t <title>] [-c]\n");
+    printf("usage: SetTerminalStyle -s <profile> [-t <title>] [-c]\n");
     printf("       SetTerminalStyle -l\n");
     printf("       SetTerminalStyle -c\n");
 }
