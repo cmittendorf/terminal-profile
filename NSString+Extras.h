@@ -6,7 +6,7 @@
 //  Copyright 2009 Christian Mittendorf. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 @interface NSString(NSStringExtras)
 + (NSString *)stringWithShellCommand:(NSString *) command;

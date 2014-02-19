@@ -19,7 +19,7 @@
     [task setStandardOutput:output];
     [task launch];
     NSData *data = [[[task standardOutput] fileHandleForReading] readDataToEndOfFile];
-    return [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 }
 
 - (NSString *)chomp
