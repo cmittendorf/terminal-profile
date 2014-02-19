@@ -38,10 +38,10 @@ int main (int argc, char **argv)
                     currentStyle = [tcs currentStyle];
                     break;
                 case 's':
-                    [tcs setStyle:[NSString stringWithCString:optarg encoding:NSUTF8StringEncoding]];
+                    tcs.style = @(optarg);
                     break;
                 case 't':
-                    [tcs setTitle:[NSString stringWithCString:optarg encoding:NSUTF8StringEncoding]];
+                    tcs.title = @(optarg);
                     break;
                 case 'l':
                     for (TerminalSettingsSet *s in [tcs stylesArray])
