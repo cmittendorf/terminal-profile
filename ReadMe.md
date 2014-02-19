@@ -3,7 +3,7 @@ Introduction
 
 A command line tool that changes the style of your current tab in Terminal.app on Mac OS X. This tools is largely inspired by an AppleScript? from the Omni Group. That script was broken when Snow Leopard came out, however there is now an updated for the script available from the Omni Group. Too bad that I found the update after I had written this helper. Though it was a nice learning example for using the ScriptingBridge Framework.
 
-![SetTerminalStyle ScreenShot](TerminalScreenShot.png "Terminal.app running SetTerminalStyle")
+![SetTerminalStyle ScreenShot](TerminalScreenShot1.png "Terminal.app running SetTerminalStyle")
 
 See the following blog post for further information on the original AppleScript:
 
@@ -31,27 +31,29 @@ The parameters available are:
     -c Returns the launch style of the tab.
     -l Lists all style configured in Terminal.app and marks the default with a "."
 
-You may add the following functions to your .bashrc or alternative shell init script:
+You may add the following functions to your .bashrc or alternative shell init script, which will change the terminal window style according to the command you are executing. The following example for instance uses a style name "ssh" for remote ssh connections, a style named "vim" for editing files using vim or a style name "sudo" for all commands executed using sudo:
 
 ```bash
 if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
     function ssh {
-        STYLE=`SetTerminalStyle -s ssh -t "$@" -c`
+        STYLE=$(SetTerminalStyle -s ssh -t "$1" -c)
         /usr/bin/ssh "$@"
         SetTerminalStyle -s "${STYLE}" 
     }
     function vim {
-        STYLE=`SetTerminalStyle -s vim -t "$@" -c`
+        STYLE=$(SetTerminalStyle -s vim -t "$1" -c)
         /usr/bin/vim "$@"
         SetTerminalStyle -s "${STYLE}"
     }
     function sudo {
-        STYLE=`SetTerminalStyle -s sudo -t "$@" -c`
+        STYLE=$(SetTerminalStyle -c -s sudo -t "$1")
         /usr/bin/sudo "$@"
         SetTerminalStyle -s "${STYLE}" 
     }
 fi
 ```
+
+![SetTerminalStyle ScreenShot](TerminalScreenShot2.png "Terminal.app using different styles for different tasks")
 
 You now have to add the three styles "ssh", "vim" and "sudo" to your Terminal.app configuration and you're done. When you now call a remote session with ssh or when you open your vim editor, the style of your terminal tab changes to the named settings.
 
