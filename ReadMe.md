@@ -33,23 +33,25 @@ The parameters available are:
 
 You may add the following functions to your .bashrc or alternative shell init script:
 
-    if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
-      function ssh {
-        STYLE=`SetTerminalStyle -s ssh -t "$@" -c`
-        /usr/bin/ssh "$@"
-        SetTerminalStyle -s "${STYLE}" 
-      }
-      function vim {
-          STYLE=`SetTerminalStyle -s vim -t "$@" -c`
-          /usr/bin/vim "$@"
-          SetTerminalStyle -s "${STYLE}"
-      }
-      function sudo {
-          STYLE=`SetTerminalStyle -s sudo -t "$@" -c`
-          /usr/bin/sudo "$@"
-          SetTerminalStyle -s "${STYLE}" 
-      }
-    fi
+```bash
+if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
+  function ssh {
+    STYLE=`SetTerminalStyle -s ssh -t "$@" -c`
+    /usr/bin/ssh "$@"
+    SetTerminalStyle -s "${STYLE}" 
+  }
+  function vim {
+      STYLE=`SetTerminalStyle -s vim -t "$@" -c`
+      /usr/bin/vim "$@"
+      SetTerminalStyle -s "${STYLE}"
+  }
+  function sudo {
+      STYLE=`SetTerminalStyle -s sudo -t "$@" -c`
+      /usr/bin/sudo "$@"
+      SetTerminalStyle -s "${STYLE}" 
+  }
+fi
+```
 
 You now have to add the three styles "ssh", "vim" and "sudo" to your Terminal.app configuration and you're done. When you now call a remote session with ssh or when you open your vim editor, the style of your terminal tab changes to the named settings.
 
