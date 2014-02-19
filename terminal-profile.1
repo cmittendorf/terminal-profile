@@ -1,0 +1,35 @@
+.\" Manpage for terminal-profile.
+.\" Contact me@cmittendorf.de to correct errors or typos.
+.TH terminal-profile 1
+.SH NAME
+terminal-profile \- changes the profile of Terminal.app's current tab
+.SH SYNOPSIS
+.B terminal-profile 
+\fB-s\fR \fI<profile>\fR
+\fB[\-t\fR \fI<title>\fR]
+\fB[\-c]\fB
+
+.B terminal-profile
+\fB\-l\fR
+
+.B terminal-profile
+\fB\-c\fR
+.SH DESCRIPTION
+.B terminal-profile
+changes Terminal.app's current profile.
+.SH OPTIONS
+.TP
+.BR \-s\fR " " \fI<profile>\fR
+Set the style of the current tab to <profile>.\fR
+.TP
+.BR \-t\fR " " \fI<title>\fR
+Set the title of the current tab to <title>.
+.TP
+.BR \-c\fR
+Returns the name of the current profile.
+.TP
+.BR \-l\fR
+Lists all profiles defined in Terminal.app, the default profile is marked with a \fB*\fR.
+
+.SH AUTHOR
+Christian Mittendorf (me@cmittendorf.de)
