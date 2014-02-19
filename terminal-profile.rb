@@ -16,11 +16,11 @@ class TerminalStyle < Formula
                          "-target", "SetTerminalStyle",
                          "SYMROOT=build", "DSTROOT=#{buildpath}",
                          "-verbose", "install"
-    man1.install "SetTerminalStyle.1" => "terminal-style.1"
-    bin.install "usr/local/bin/SetTerminalStyle" => "terminal-style"
+    man1.install "SetTerminalStyle.1" => "terminal-profile.1"
+    bin.install "usr/local/bin/SetTerminalStyle" => "terminal-profile"
   end
 
   test do
-    system "#{bin}/terminal-style", "-c"
+    system "#{bin}/terminal-profile", "-c"
   end
 end
