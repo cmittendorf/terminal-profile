@@ -35,21 +35,21 @@ You may add the following functions to your .bashrc or alternative shell init sc
 
 ```bash
 if [ "$TERM_PROGRAM" = "Apple_Terminal" ]; then
-  function ssh {
-    STYLE=`SetTerminalStyle -s ssh -t "$@" -c`
-    /usr/bin/ssh "$@"
-    SetTerminalStyle -s "${STYLE}" 
-  }
-  function vim {
-      STYLE=`SetTerminalStyle -s vim -t "$@" -c`
-      /usr/bin/vim "$@"
-      SetTerminalStyle -s "${STYLE}"
-  }
-  function sudo {
-      STYLE=`SetTerminalStyle -s sudo -t "$@" -c`
-      /usr/bin/sudo "$@"
-      SetTerminalStyle -s "${STYLE}" 
-  }
+    function ssh {
+        STYLE=`SetTerminalStyle -s ssh -t "$@" -c`
+        /usr/bin/ssh "$@"
+        SetTerminalStyle -s "${STYLE}" 
+    }
+    function vim {
+        STYLE=`SetTerminalStyle -s vim -t "$@" -c`
+        /usr/bin/vim "$@"
+        SetTerminalStyle -s "${STYLE}"
+    }
+    function sudo {
+        STYLE=`SetTerminalStyle -s sudo -t "$@" -c`
+        /usr/bin/sudo "$@"
+        SetTerminalStyle -s "${STYLE}" 
+    }
 fi
 ```
 
