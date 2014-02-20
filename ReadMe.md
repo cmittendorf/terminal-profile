@@ -75,7 +75,7 @@ For using another applications scripting definition we have to convert its sdef 
 Brew Formula
 ============
 
-I have forked the brew project and created a formula for terminal-style. For testing out terminal-style you can easily switch your brew installation to this fork using the following command:
+I have forked the [brew project](http://brew.sh) and created a formula for ```terminal-style```. For testing out terminal-style you can easily switch your brew installation to [this brew fork](https://github.com/cmittendorf/homebrew) using the following command:
 
 ```bash
 cd /usr/local && git remote set-url origin https://https://github.com/cmittendorf/homebrew.git
