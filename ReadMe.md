@@ -71,3 +71,15 @@ For using another applications scripting definition we have to convert its sdef 
 
     sdef /Applications/Utilities/Terminal.app | \
     /usr/bin/sdp -fh -o . --basename "Terminal" --bundleid "com.apple.Terminal"
+
+Brew Formula
+============
+
+I have forked the brew project and created a formula for terminal-style. For testing out terminal-style you can easily switch your brew installation to this fork using the following command:
+
+```bash
+cd /usr/local && git remote set-url origin https://https://github.com/cmittendorf/homebrew.git
+```
+
+After running ```brew update``` you can install terminal-style by running ```brew install terminal-style```.
+
