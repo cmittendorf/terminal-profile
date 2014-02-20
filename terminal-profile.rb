@@ -11,7 +11,6 @@ class TerminalProfile < Formula
   depends_on :xcode
 
   def install
-    # Remove unrecognized options if warned by configure
     system 'xcodebuild', "-project", "TerminalProfile.xcodeproj",
                          "-target", "terminal-profile",
                          "SYMROOT=build", "DSTROOT=#{buildpath}",
