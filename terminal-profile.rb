@@ -1,9 +1,9 @@
 require "formula"
 
 class TerminalProfile < Formula
+  url "https://github.com/cmittendorf/terminal-profile/archive/0.9.0.zip"
   homepage "https://github.com/cmittendorf/terminal-profile"
-  url "https://github.com/cmittendorf/terminal-profile/archive/1.0.0.zip"
-  sha1 "892ea4e6383bc21f5a2defb18738b80dcd489e15"
+  sha1 "a9a6b26c63fbd5d41ecca3b06dcd9cfacac0689f"
 
   head "https://github.com/cmittendorf/terminal-profile", :branch => "master"
 
